@@ -1,6 +1,6 @@
 # VendorRestaurant
 This Django project follows the MTV (Model-Template-View) architecture 
-and includes the development of an Employee Directory and TODO App,allowing users to manage employee information and create task lists respectively.
+and includes the development of an Employee Directory and TODO App, allowing users to manage employee information and create task lists respectively.
 
 The project incorporates features like PostgreSQL database configuration, 
 custom user model, user registration, vendor authentication, token verification, 

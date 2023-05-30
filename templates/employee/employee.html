@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f9f9f9;
+        }
+
+        .employee-card {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .employee-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee List</h1>
+    {% for employee in employees %}
+    <div class="employee-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Photo</th>
+                    <th>Designation</th>
+                    <th>Email Address</th>
+                    <th>Phone Number</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ employee.id }}</td>
+                    <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+                    <td><img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo"></td>
+                    <td>{{ employee.designation }}</td>
+                    <td>{{ employee.email_address }}</td>
+                    <td>{{ employee.phone_number }}</td>
+                    <td>{{ employee.created_at }}</td>
+                    <td>{{ employee.updated_at }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endfor %}
+</body>
+</html>

@@ -19,6 +19,15 @@
             <textarea name="description" id="description" rows="4" class="form-control"></textarea>
           </div>
 
+          <div class="form-group">
+            <label for="employee">Assign to Employee:</label>
+            <select name="employee" id="employee" class="form-control" required>
+              {% for employee in employees %}
+                <option value="{{ employee.id }}">{{ employee.first_name }} {{ employee.last_name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
           <button type="submit" class="btn btn-primary">Create Task</button>
         </form>
 

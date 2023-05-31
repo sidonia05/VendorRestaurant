@@ -4,6 +4,6 @@ from todo import views
 urlpatterns = [
     # Other URL patterns
 
-    path('tasks/', views.task_list, name='task_list'),
-    path('tasks/create/', views.task_create, name='task_create'),
+    path('tasks/', views.TaskListView.as_view(), name='task_list'),
+    path('tasks/create/', views.TaskCreateView.as_view(), name='task_create'),
 ]

@@ -5,7 +5,7 @@
 
   <ul>
     {% for task in tasks %}
-      <li>{{ task.title }}</li>
+      <li>{{ task.title }} - Assigned to: {{ task.employee.first_name }} {{ task.employee.last_name }}</li>
     {% empty %}
       <li>No tasks found.</li>
     {% endfor %}
@@ -13,3 +13,4 @@
 
   <a href="{% url 'task_create' %}">Create New Task</a>
 {% endblock %}
+

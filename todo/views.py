@@ -1,13 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import View
+from .models import Employee, Task
 
-def task_list(request):
-    tasks = []  # Replace this with your logic to fetch the list of tasks
-    return render(request, 'todo/task_list.html', {'tasks': tasks})
+class TaskCreateView(View):
+    def get(self, request):
+        employees = Employee.objects.all()
+        return render(request, 'todo/create_task.html', {'employees': employees})
 
-def task_create(request):
-    if request.method == 'POST':
-        # Handle form submission and task creation here
-        pass
-    else:
-        return render(request, 'todo/task_create.html')
+    def post(self, request):
+        title = request.POST['title']
+        description = request.POST['description']
+        employee_id = request.POST['employee']
+        employee = Employee.objects.get(id=employee_id)
+        task = Task.objects.create(title=title, description=description, employee=employee)
+        return redirect('task_list')
 
+class TaskListView(View):
+    def get(self, request):
+        tasks = Task.objects.all()
+        return render(request, 'todo/task_list.html', {'tasks': tasks})

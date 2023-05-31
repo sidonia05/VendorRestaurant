@@ -31,16 +31,9 @@
 
 
             {% if user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        ToDo (for employees)
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'task_list' %}">To-do list</a></li>
-                        <li><a class="dropdown-item" href="{% url 'task_create' %}">Create Task</a></li>
-                    </ul>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'todo' %}">Tasks</a>
+            </li>
             {% endif %}
         </ul>
         <form class="form-inline my-2 my-lg-0">

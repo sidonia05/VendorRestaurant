@@ -10,3 +10,4 @@ def task_create(request):
         pass
     else:
         return render(request, 'todo/task_create.html')
+

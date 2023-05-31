@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Create Task</h1>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Create Task</h1>
+      </div>
+      <div class="card-body">
+        <form method="post" action="{% url 'task_create' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" class="form-control" required>
+          </div>
 
-  <form method="post" action="{% url 'task_create' %}">
-    {% csrf_token %}
-    <label for="title">Title:</label>
-    <input type="text" name="title" id="title" required>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" rows="4" class="form-control"></textarea>
+          </div>
 
-    <label for="description">Description:</label>
-    <textarea name="description" id="description" rows="4"></textarea>
+          <button type="submit" class="btn btn-primary">Create Task</button>
+        </form>
 
-    <button type="submit">Create Task</button>
-  </form>
-
-  <a href="{% url 'task_list' %}">Back to Task List</a>
+        <a href="{% url 'task_list' %}" class="btn btn-link">Back to Task List</a>
+      </div>
+    </div>
+  </div>
 {% endblock %}

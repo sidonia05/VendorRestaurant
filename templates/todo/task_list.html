@@ -1,17 +1,15 @@
-{#<!-- task_list.html -->#}
-{##}
-{#{% extends 'base.html' %}#}
-{##}
-{#{% block content %}#}
-{#  <h1>Task List</h1>#}
-{##}
-{#  <ul>#}
-{#    {% for task in tasks %}#}
-{#      <li>{{ task.title }}</li>#}
-{#    {% empty %}#}
-{#      <li>No tasks found.</li>#}
-{#    {% endfor %}#}
-{#  </ul>#}
-{##}
-{#  <a href="{% url 'todo/task_create' %}">Create New Task</a>#}
-{#{% endblock %}#}
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Task List</h1>
+
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task.title }}</li>
+    {% empty %}
+      <li>No tasks found.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'task_create' %}">Create New Task</a>
+{% endblock %}

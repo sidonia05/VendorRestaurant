@@ -1,20 +1,18 @@
-{#<!-- task_create.html -->#}
-{##}
-{#{% extends 'base.html' %}#}
-{##}
-{#{% block content %}#}
-{#  <h1>Create Task</h1>#}
-{##}
-{#  <form method="post" action="{% url 'todo/task_create' %}">#}
-{#    {% csrf_token %}#}
-{#    <label for="title">Title:</label>#}
-{#    <input type="text" name="title" id="title" required>#}
-{##}
-{#    <label for="description">Description:</label>#}
-{#    <textarea name="description" id="description" rows="4"></textarea>#}
-{##}
-{#    <button type="submit">Create Task</button>#}
-{#  </form>#}
-{##}
-{#  <a href="{% url 'todo/task_list' %}">Back to Task List</a>#}
-{#{% endblock %}#}
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Create Task</h1>
+
+  <form method="post" action="{% url 'task_create' %}">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" required>
+
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4"></textarea>
+
+    <button type="submit">Create Task</button>
+  </form>
+
+  <a href="{% url 'task_list' %}">Back to Task List</a>
+{% endblock %}

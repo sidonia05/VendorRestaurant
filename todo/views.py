@@ -1,11 +1,12 @@
-# # views.py
-#
-# from django.shortcuts import render
-#
-# def task_create(request):
-#     # Add your logic for task creation here
-#     return render(request, 'todo/task_create.html')
-#
-# def task_list(request):
-#     tasks = []  # Add your logic to fetch the list of tasks here
-#     return render(request, 'todo/task_list.html', {'tasks': tasks})
+from django.shortcuts import render
+
+def task_list(request):
+    tasks = []  # Replace this with your logic to fetch the list of tasks
+    return render(request, 'todo/task_list.html', {'tasks': tasks})
+
+def task_create(request):
+    if request.method == 'POST':
+        # Handle form submission and task creation here
+        pass
+    else:
+        return render(request, 'todo/task_create.html')

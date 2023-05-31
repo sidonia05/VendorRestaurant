@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="title-employee">Employee Details</h1>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="employee-table">
+                        <tr>
+                            <td class="employee-photo">
+                                <img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo" class="img-small">
+                            </td>
+                            <td class="employee-info">
+                                <p><strong>ID:</strong> {{ employee.id }}</p>
+                                <p><strong>Name:</strong> {{ employee.first_name }} {{ employee.last_name }}</p>
+                                <p><strong>Designation:</strong> {{ employee.designation }}</p>
+                                <p><strong>Email:</strong> {{ employee.email_address }}</p>
+                                <p><strong>Phone:</strong> {{ employee.phone_number }}</p>
+                                <p><strong>Created At:</strong> {{ employee.created_at }}</p>
+                                <p><strong>Updated At:</strong> {{ employee.updated_at }}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+               <div class="card-footer">
+                <div class="center-link">
+                    <a href="{% url 'employee' %}" class="btn btn-primary">View Employee Schedule</a>
+                </div>
+            </div>
+            <br>
+            <div class="card-footer">
+                <div class="center-link">
+                    <a href="{% url 'employee' %}" class="link-style">Go to employee page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

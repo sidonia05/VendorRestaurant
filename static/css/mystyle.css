@@ -29,4 +29,9 @@ th {
   border-radius: 50%;
 }
 
+.title-employee {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 /* finish - employee.css */

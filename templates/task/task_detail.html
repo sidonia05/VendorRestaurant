@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="title-employee text-center">{{ task.title }}</h1>
+            <div>
+                <p>{{ task.description }}</p>
+                <p>Assigned to: {{ task.user }}</p>
+                <p>Completed: {{ task.complete }}</p>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+{% endblock %}

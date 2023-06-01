@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="todo-title">To Do</h1>
+            <div>
+                <table class="task-table mx-auto">
+                    <tr>
+                        <th>Tasks List</th>
+                        <th>Tasks User</th>
+                        <th>Completed</th>
+                    </tr>
+                    {% for task in tasks %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'task-detail' task.pk %}" class="task-link">{{ task.title }}</a>
+                            </td>
+                            <td>{{ task.user }}</td>
+                            <td>
+                                <input type="checkbox" {% if task.complete %}checked{% endif %} disabled class="task-complete-checkbox">
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2" class="text-center"><h3>No items</h3></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+{% endblock %}

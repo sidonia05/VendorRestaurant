@@ -4,7 +4,7 @@ from django.db import models
 class Employee(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    photo = models.ImageField(upload_to='images')
+    photo = models.ImageField(upload_to='img')
     designation = models.CharField(max_length=100)
     email_address = models.EmailField(max_length=100, unique=True)
     phone_number = models.CharField(max_length=13, blank=True)

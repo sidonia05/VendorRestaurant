@@ -3,35 +3,41 @@
 
 {% block content %}
     <div class="row">
-        <div class="table-responsive">
+        <div class="table-responsive col-md-10 mx-auto">
             <h1 class="title-employee">Employee List</h1>
             <div class="employee-card">
                 <table>
                     <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Photo</th>
-                            <th>Designation</th>
-                            <th>Email Address</th>
-                            <th>Phone Number</th>
-                            <th>Created At</th>
-                            <th>Updated At</th>
-                        </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Photo</th>
+                        <th>Designation</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        {% for employee in employees %}
-                            <tr>
-                                <td>{{forloop.counter}}</td>
-                                <td><a href="{% url 'employee_details' pk=employee.id %}">{{ employee.first_name }} {{ employee.last_name }}</a></td>
-                                <td><img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo" class="employee-photo1"></td>
-                                <td>{{ employee.designation }}</td>
-                                <td>{{ employee.email_address }}</td>
-                                <td>{{ employee.phone_number }}</td>
-                                <td>{{ employee.created_at|date:"Y-m-d H:i"  }}</td>
-                                <td>{{ employee.updated_at|date:"Y-m-d H:i"  }}</td>
-                            </tr>
-                        {% endfor %}
+                    {% for employee in employees %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>
+                                <a href="{% url 'employee_details' pk=employee.id %}"
+                                   class="employee-name-link">
+                                    {{ employee.first_name }} {{ employee.last_name }}</a>
+                            </td>
+
+                            <td><img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo"
+                                     class="employee-photo"></td>
+                            <td>{{ employee.designation }}</td>
+                            <td>{{ employee.email_address }}</td>
+                            <td>{{ employee.phone_number }}</td>
+                            <td>{{ employee.created_at|date:"Y-m-d H:i" }}</td>
+                            <td>{{ employee.updated_at|date:"Y-m-d H:i" }}</td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>

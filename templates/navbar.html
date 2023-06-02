@@ -1,7 +1,7 @@
 {% load static %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
 
-        <img src="{% static 'media/images/favicon.ico' %}" alt="img" class="favicon">
+    <img src="{% static 'media/images/favicon.ico' %}" alt="img" class="favicon">
 
     <a class="navbar-brand" href="#">Fork and Knife</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,18 +32,26 @@
                     <a class="dropdown-item" href="#">Steak</a>
                 </ul>
             </li>
-{#            {% if user.is_authenticated %}#}
+            {#            {% if user.is_authenticated %}#}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'task-list' %}">Task</a>
             </li>
-{#            {% endif %}#}
+            {#            {% endif %}#}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+
         </ul>
+
 
     </div>
 
-      <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
 
 </nav>
 

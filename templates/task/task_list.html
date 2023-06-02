@@ -8,11 +8,12 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+        </div>
         <div class="col-md-8">
             <h1 class="todo-title">To Do</h1>
             <div>
-                <table class="task-table mx-auto">
+                <table class="task-table">
                     <tr>
                         <th>Tasks List</th>
                         <th>Tasks User</th>
@@ -24,7 +25,7 @@
                                 <a href="{% url 'task-detail' task.pk %}" class="task-link">{{ task.title }}</a>
                             </td>
                             <td>{{ task.user }}</td>
-                            <td>
+                            <td class="checkbutton">
                                 <input type="checkbox" {% if task.complete %}checked{% endif %} disabled class="task-complete-checkbox">
                             </td>
                         </tr>
@@ -39,3 +40,10 @@
         <div class="col-md-2"></div>
     </div>
 {% endblock %}
+
+{##}
+{#pentru mai tarziu {% if user.is_authenticated and user.has_perm('your_app.can_check_tasks') %}#}
+{#    <input type="checkbox" {% if task.complete %}checked{% endif %} class="task-complete-checkbox">#}
+{#{% else %}#}
+{#    <input type="checkbox" {% if task.complete %}checked{% endif %} disabled class="task-complete-checkbox">#}
+{#{% endif %}#}

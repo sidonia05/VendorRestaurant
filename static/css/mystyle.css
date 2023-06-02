@@ -12,11 +12,17 @@ a.navbar-brand {
 
 a.nav-link {
     color: #DAA520;
+    transition: color 0.3s ease;
+
+}
+
+a.nav-link:hover {
+    color: #6c7214;
 }
 
 .favicon {
-    width: 40px;
-    margin-right: 5px;
+    width: 33px;
+    margin-right: 10px;
 }
 
 .home-content {
@@ -24,7 +30,8 @@ a.nav-link {
     padding-right: 45%;
     margin-left: 20px;
     line-height: 35px;
-    padding-top: 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -51,4 +58,126 @@ footer .container {
 .footer-text {
     color: #fff;
     font-size: 10px;
+}
+
+.title-employee  {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.employee-card {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.employee-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-small {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
++
+
+a.employee-name-link:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+a.employee-name-link:visited {
+    color: inherit /* Setează culoarea la albastru pentru link-urile vizitate */
+}
+
+
+
+
+
+.card-footer {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.todo-title {
+    text-align: center;
+}
+/* mystyle.css */
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+}
+
+.task-table th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.task-table td {
+    padding: 10px;
+}
+
+.task-link {
+    text-decoration: none;
+    color: blue;
+}
+
+.task-link:hover {
+    text-decoration: underline;
+}
+
+.task-complete-checkbox {
+    transform: scale(1.2);
+    margin: 0 auto;
+    display: inline-block;
+
+}
+
+.checkbutton {
+    text-align: center;
+}
+
+
+/* mystyle.css */
+
+.task-table tbody {
+    background-color: #fff; /* Culoarea de fundal a tbody */
+}
+
+.task-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Culoarea de fundal alternată pentru rândurile pare */
+}
+
+.task-table tbody td {
+    padding: 10px;
 }

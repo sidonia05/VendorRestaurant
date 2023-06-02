@@ -3,33 +3,29 @@
 
 {% block content %}
     <div class="row">
-        <div class="card">
+        <div class="card col-md-6 mx-auto">
             <div class="card-header">
                 <h1 class="title-employee">Employee Details</h1>
             </div>
             <div class="card-body">
-                <div class="table-responsive">
-                    <table class="employee-table">
-                        <tr>
-                            <td class="employee-photo">
-                                <img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo" class="img-small">
-                            </td>
-                            <td class="employee-info">
-                                <p><strong>ID:</strong> {{ employee.id }}</p>
-                                <p><strong>Name:</strong> {{ employee.first_name }} {{ employee.last_name }}</p>
-                                <p><strong>Designation:</strong> {{ employee.designation }}</p>
-                                <p><strong>Email:</strong> {{ employee.email_address }}</p>
-                                <p><strong>Phone:</strong> {{ employee.phone_number }}</p>
-                                <p><strong>Created At:</strong> {{ employee.created_at }}</p>
-                                <p><strong>Updated At:</strong> {{ employee.updated_at }}</p>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ employee.photo.url }}" alt="{{ employee.first_name }}'s photo" class="img-small">
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>ID:</strong> {{ employee.id }}</p>
+                        <p><strong>Name:</strong> {{ employee.first_name }} {{ employee.last_name }}</p>
+                        <p><strong>Designation:</strong> {{ employee.designation }}</p>
+                        <p><strong>Email:</strong> {{ employee.email_address }}</p>
+                        <p><strong>Phone:</strong> {{ employee.phone_number }}</p>
+                        <p><strong>Created At:</strong> {{ employee.created_at }}</p>
+                        <p><strong>Updated At:</strong> {{ employee.updated_at }}</p>
+                    </div>
                 </div>
             </div>
-               <div class="card-footer">
+            <div class="card-footer">
                 <div class="center-link">
-                    <a href="#" class="btn btn-succes">View Employee Schedule</a>
+                    <a href="#" class="btn btn-success">View Employee Tasks</a>
                 </div>
             </div>
             <br>

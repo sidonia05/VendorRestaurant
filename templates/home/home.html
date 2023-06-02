@@ -1,43 +1,29 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block title %} Home {% endblock %}
-
 {% block content %}
-<section class="container-fluid" style="background-image: url('../static/img/background.jpg');
-            background-size: cover; background-position: center; width: 100vw; height: 80vw;">
-  <!-- Content goes here -->
 
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Fork And Knife</h3>
+            <h1>Vendor Restaurant</h1>
+            <p>Vendor Restaurant is a vibrant and trendy eatery that offers a unique dining experience by bringing together a diverse selection of cuisines from various local vendors under one roof. From mouthwatering pizzas to succulent steaks, refreshing salads, and comforting soups, the restaurant caters to a wide range of culinary preferences. With an open kitchen concept, patrons can witness the skillful preparation of their favorite dishes, adding to the overall excitement. Whether you're craving Italian flavors, savoring a juicy steak, or opting for a lighter option like salads and soups, Vendor Restaurant has something to delight every palate..</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/sidonia05" style="--i:7;"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/sidonia05" style="--i:8;"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:9;"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
 
-  <div class="row">
-    <div class="col-12">
-      <h1 style="color: indianred;">Welcome to Knife and Fork</h1>
-      <p>Experience exquisite flavors and exceptional service at our restaurant.</p>
-      <img src="#" alt="Restaurant Image">
+        <div class="home-content">
+            <p>Our mission is to provide exceptional food quality and service to our customers, ensuring a memorable dining experience. We strive to source the freshest ingredients and collaborate with local vendors to bring you the best flavors in town. Come and indulge in the delightful ambiance, friendly staff, and mouthwatering dishes at Vendor Restaurant.</p>
+        </div>
+    </section>
 
-      <div class="about-section">
-        <h2>About Us</h2>
-        <p>Discover our passion for food and dedication to culinary excellence.</p>
-      </div>
-
-      <div class="menu-section">
-        <h2>Menu</h2>
-        <p>Explore our mouth-watering menu featuring a variety of dishes.</p>
-        <a href="#">View Menu</a>
-      </div>
-
-      <div class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us to make a reservation or inquire about our services.</p>
-        <p>Phone: 123-456-7890</p>
-        <p>Email: info@restaurantname.com</p>
-      </div>
+    <footer class="footer">
+    <div class="container">
+        <p class="footer-text">&copy; 2023 Vendor Restaurant. All rights reserved.</p>
     </div>
-  </div>
-</section>
-
-{% block footer %}
-<footer>
-  <p>&copy; {{ current_year }} Knife and Fork. All rights reserved. </p>
 </footer>
-{% endblock %}
+
+
 {% endblock %}

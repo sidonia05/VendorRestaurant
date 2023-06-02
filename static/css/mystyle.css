@@ -1,154 +1,45 @@
-/* employee.css */
-
-.employee-card {
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-.employee-photo1 {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
-
-.title-employee {
-  text-align: center;
-  padding-bottom: 5px;
-}
-
-/* employee -details */
-
-.employee-table {
-  width: 100%;
-  border: none;
-}
-
-.employee-table td {
-  border: none;
+body {
+    background-image: url("/static/media/images/background.jpg");
+    color: #DAA520;
+    background-size: 100%
 
 }
 
-.employee-photo {
-  width: 30%;
-  border: none;
-  margin-right: 20px;
+.favicon {
+    width: 40px;
+    margin-right: 5px;
 }
 
-.img-small {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
-
-.employee-info {
-  padding-left: 80px;
-  width: 80%;
-  text-align: left;
+.home-content {
+    text-align: justify;
+    padding-right: 45%;
+    margin-left: 20px;
+    line-height: 35px;
+    padding-top: 26px;
 
 }
 
-.title-employee {
-  text-align: center;
-  padding-bottom: 20px;
+.social-media {
+    margin-top: 20px;
 }
 
-/*link  - go to another page */
-.center-link {
-  text-align: center;
+.social-media a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ffe325;
+}
+
+footer .container {
+    text-align: center;
 
 }
 
-.link-style {
-  color: blue;
-  text-decoration: none;
-}
-
-
-/*add tasks*/
-/* styles.css */
-.container {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-textarea,
-select {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.custom-option {
-  color: black;!important;
-}
-
-
-/*task*/
-/* styles.css */
-/* mystyle.css */
-
-.todo-title {
-  color: black;
-  text-align: center;
-}
-
-.task-link-hover:hover {
-  text-decoration: underline;
-}
-
-.task-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.task-table th, .task-table td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ccc;
-}
-
-.task-complete-checkbox {
-  transform: scale(1.5);
-  margin-left: 10px;
+.footer-text {
+    color: #fff;
+    font-size: 10px;
 }

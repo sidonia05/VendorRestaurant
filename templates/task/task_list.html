@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
 {% endblock %}
 
-
 {% block content %}
     <div class="row">
         <div class="col-md-2">
@@ -13,11 +12,15 @@
         <div class="col-md-8">
             <h1 class="todo-title">To Do</h1>
             <div>
+                <td>
+                    <a href="{% url 'task-create' %}" class="task-action-link">Add a task</a>
+                </td>
                 <table class="task-table">
                     <tr>
                         <th>Tasks List</th>
                         <th>Tasks User</th>
                         <th>Completed</th>
+                        <th>Actions</th>
                     </tr>
                     {% for task in tasks %}
                         <tr>
@@ -26,12 +29,21 @@
                             </td>
                             <td>{{ task.user }}</td>
                             <td class="checkbutton">
-                                <input type="checkbox" {% if task.complete %}checked{% endif %} disabled class="task-complete-checkbox">
+                                <input type="checkbox" {% if task.complete %}checked{% endif %} disabled
+                                       class="task-complete-checkbox">
+                            </td>
+                            <td>
+                                <a href="{% url 'task-update' task.pk %}" type="button" class="btn btn-outline-dark">
+                                    <i class='bx bx-edit'></i>
+                                </a>
+                                <a href="{% url 'task-delete' task.pk %}" type="button" class="btn btn-outline-dark">
+                                    <i class='bx bx-trash'></i>
+                                </a>
                             </td>
                         </tr>
                     {% empty %}
                         <tr>
-                            <td colspan="2" class="text-center"><h3>No items</h3></td>
+                            <td colspan="4" class="text-center"><h3>No items</h3></td>
                         </tr>
                     {% endfor %}
                 </table>
@@ -40,10 +52,3 @@
         <div class="col-md-2"></div>
     </div>
 {% endblock %}
-
-{##}
-{#pentru mai tarziu {% if user.is_authenticated and user.has_perm('your_app.can_check_tasks') %}#}
-{#    <input type="checkbox" {% if task.complete %}checked{% endif %} class="task-complete-checkbox">#}
-{#{% else %}#}
-{#    <input type="checkbox" {% if task.complete %}checked{% endif %} disabled class="task-complete-checkbox">#}
-{#{% endif %}#}

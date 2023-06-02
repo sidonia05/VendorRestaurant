@@ -181,3 +181,14 @@ tr:nth-child(even) {
 .task-table tbody td {
     padding: 10px;
 }
+
+
+/* Stil pentru acțiunea de actualizare */
+.task-action-link.update {
+    color: blue;
+}
+
+/* Stil pentru pictograma de coș de gunoi */
+.task-action-link.delete {
+    color: red;
+}

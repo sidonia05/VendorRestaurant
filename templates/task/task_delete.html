@@ -1,0 +1,10 @@
+<!-- task_delete.html -->
+<h1>Delete Task</h1>
+
+<p>{{ confirm_message }}</p>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Delete</button>
+</form>

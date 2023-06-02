@@ -1,4 +1,5 @@
-from django.views.generic import ListView, DetailView, CreateView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from task.forms import TaskForm
 from task.models import Task
 
@@ -18,6 +19,41 @@ class TaskCreate(CreateView):
     form_class = TaskForm
     template_name = 'task/task_create.html'
     success_url = '/tasks/'
+
+class TaskUpdate(UpdateView):
+    model = Task
+    fields = '__all__'
+    template_name = 'task/task_update.html'
+    success_url = '/tasks/'
+
+# class TaskDelete(DeleteView):
+#     model = Task
+#     template_name = 'task/task_delete.html'
+#     success_url = '/tasks/'
+from django.urls import reverse_lazy
+from django.views.generic import DeleteView
+from task.models import Task
+
+class TaskDelete(DeleteView):
+    model = Task
+    template_name = 'task/task_delete.html'
+    success_url = reverse_lazy('task-list')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+
+        # Verifică dacă există o cerere de confirmare a ștergerii
+        if 'confirm_delete' in request.POST:
+            # Dacă da, șterge obiectul și redirecționează către succesul URL-ului
+            return super().delete(request, *args, **kwargs)
+        else:
+            # Altfel, afișează un mesaj de confirmare
+            context['confirm_message'] = 'Are you sure you want to delete this field?'
+
+            return self.render_to_response(context)
+
+
 
 
 

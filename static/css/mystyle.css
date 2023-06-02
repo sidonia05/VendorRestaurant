@@ -5,6 +5,15 @@ body {
 
 }
 
+a.navbar-brand {
+    color: #DAA520;
+
+}
+
+a.nav-link {
+    color: #DAA520;
+}
+
 .favicon {
     width: 40px;
     margin-right: 5px;

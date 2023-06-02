@@ -1,18 +1,21 @@
+from django.http import request
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from task.forms import TaskForm
 from task.models import Task
 
-# Create your views here.
+
 class TaskList(ListView):
     model = Task
     context_object_name = 'tasks'
     template_name = 'task/task_list.html'
 
+
 class TaskDetail(DetailView):
     model = Task
     context_object_name = 'task'
     template_name = 'task/task_detail.html'
+
 
 class TaskCreate(CreateView):
     model = Task
@@ -20,19 +23,13 @@ class TaskCreate(CreateView):
     template_name = 'task/task_create.html'
     success_url = '/tasks/'
 
+
 class TaskUpdate(UpdateView):
     model = Task
-    fields = '__all__'
+    form_class = TaskForm
     template_name = 'task/task_update.html'
     success_url = '/tasks/'
 
-# class TaskDelete(DeleteView):
-#     model = Task
-#     template_name = 'task/task_delete.html'
-#     success_url = '/tasks/'
-from django.urls import reverse_lazy
-from django.views.generic import DeleteView
-from task.models import Task
 
 class TaskDelete(DeleteView):
     model = Task
@@ -52,9 +49,3 @@ class TaskDelete(DeleteView):
             context['confirm_message'] = 'Are you sure you want to delete this field?'
 
             return self.render_to_response(context)
-
-
-
-
-
-

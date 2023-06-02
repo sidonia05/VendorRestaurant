@@ -5,6 +5,23 @@ body {
 
 }
 
+html, body {
+    margin: 1px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content {
+    flex: 1;
+}
+
+
+footer {
+        flex-shrink: 0;
+    }
+
 a.navbar-brand {
     color: #DAA520;
 
@@ -127,12 +144,13 @@ tr:nth-child(even) {
 .todo-title {
     text-align: center;
 }
-/* mystyle.css */
+
 
 .task-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: #f9f9f9;
 
 }
 
@@ -167,28 +185,9 @@ tr:nth-child(even) {
     text-align: center;
 }
 
-
-/* mystyle.css */
-
-.task-table tbody {
-    background-color: #fff; /* Culoarea de fundal a tbody */
+a.add-todo {
+    font-size: 25px;
+    color: #DAA520;
+    text-align: center;
 }
 
-.task-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Culoarea de fundal alternată pentru rândurile pare */
-}
-
-.task-table tbody td {
-    padding: 10px;
-}
-
-
-/* Stil pentru acțiunea de actualizare */
-.task-action-link.update {
-    color: blue;
-}
-
-/* Stil pentru pictograma de coș de gunoi */
-.task-action-link.delete {
-    color: red;
-}

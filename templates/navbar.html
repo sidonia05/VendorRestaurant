@@ -17,21 +17,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'employee' %}">Employee</a>
             </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    Menu
-                </a>
-                <ul class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Pizza</a>
-                    <a class="dropdown-item" href="#">Soup</a>
-                    <a class="dropdown-item" href="#">Salad</a>
-                    <a class="dropdown-item" href="#">Burger</a>
-                    <a class="dropdown-item" href="#">Pasta</a>
-                    <a class="dropdown-item" href="#">Steak</a>
-                </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'menu-homepage' %}">Menu</a>
             </li>
+
+
             {#            {% if user.is_authenticated %}#}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'task-list' %}">Task</a>
@@ -40,11 +30,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-
         </ul>
+
+           <div class="login-register">
+            <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal"
+               href="#">Login / Register</a>
+            <a class="get-start-btn" href="#">Register Restaurant</a>
+        </div>
+    </div>
+
 
 
     </div>

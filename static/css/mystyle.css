@@ -1,7 +1,10 @@
 body {
     background-image: url("/static/media/images/background.jpg");
     color: #DAA520;
-    background-size: 100%
+    background-size: 100% 115%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
@@ -19,8 +22,8 @@ html, body {
 
 
 footer {
-        flex-shrink: 0;
-    }
+    flex-shrink: 0;
+}
 
 a.navbar-brand {
     color: #DAA520;
@@ -36,6 +39,22 @@ a.nav-link {
 a.nav-link:hover {
     color: #6c7214;
 }
+
+.login-register {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+    margin-left: 460px;
+
+}
+
+.login-register a {
+    margin-left: 10px;
+    color:  #DAA520;
+    text-decoration: none;!important;
+}
+
 
 .favicon {
     width: 33px;
@@ -77,7 +96,7 @@ footer .container {
     font-size: 10px;
 }
 
-.title-employee  {
+.title-employee {
     text-align: center;
     margin-bottom: 15px;
 }
@@ -104,7 +123,6 @@ footer .container {
 }
 
 +
-
 a.employee-name-link:hover {
     text-decoration: underline;
     color: blue;
@@ -113,9 +131,6 @@ a.employee-name-link:hover {
 a.employee-name-link:visited {
     color: inherit /* Setează culoarea la albastru pentru link-urile vizitate */
 }
-
-
-
 
 
 .card-footer {
@@ -151,7 +166,7 @@ tr:nth-child(even) {
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #f9f9f9;
-
+    opacity: 0.8;
 }
 
 .task-table th {

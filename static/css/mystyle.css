@@ -212,10 +212,13 @@ a.nav-link.active {
     font-size: 18px;
      line-height: 21px;
 
+
 }
 
 .navbar-vertical {
     margin-bottom: 20px;
+    margin-left: 2px;
+
 }
 
 .navbar-vertical .nav-link {
@@ -227,4 +230,9 @@ a.nav-link.active {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.navbar-vertical {
+    margin-top: 30px;
+    margin-left: 0px;
 }

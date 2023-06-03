@@ -206,3 +206,25 @@ a.add-todo {
     text-align: center;
 }
 
+/*magazin*/
+/* Custom CSS for your HTML code */
+a.nav-link.active {
+    font-size: 18px;
+     line-height: 21px;
+
+}
+
+.navbar-vertical {
+    margin-bottom: 20px;
+}
+
+.navbar-vertical .nav-link {
+    margin-bottom: 10px;
+}
+
+.footer-style-2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

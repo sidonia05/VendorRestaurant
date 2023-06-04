@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'task',
     'fontawesome_5',
     'restaurantmenu',
+    'recipes',
 
 
 ]

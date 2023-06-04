@@ -266,7 +266,8 @@ a.nav-link.active {
 .text-description-product {
     font-size: 12px;
     left: 16%;
-    margin-top: 1px;
+
+
 }
 
 .card {
@@ -275,7 +276,7 @@ a.nav-link.active {
 
 .price {
     position: absolute;
-    top: 430px;
+    top: 440px;
     left: 16%;
     transform: translateX(-50%);
 
@@ -293,6 +294,7 @@ a.nav-link.active {
     /*overflow: hidden;*/
     position: relative;
 
+
 }
 
 .image-container img {
@@ -301,7 +303,7 @@ a.nav-link.active {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 }
 
 /*.image-container:hover:before {*/
@@ -311,3 +313,10 @@ a.nav-link.active {
 /*.image-container:hover img {*/
 /*    transform: scale(1.1);*/
 /*}*/
+
+.recipe-container {
+        max-width: 800px;
+        margin: 0;
+        padding: 20px;
+
+    }

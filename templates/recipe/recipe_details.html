@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <div class="container">
+    <div class="recipe-container">
+        <h1>Recipe Details</h1>
+
+        {% for recipe in recipes %}
+        <div>
+            <h2>{{ recipe.title }}</h2>
+            <img src="{{ recipe.photo.url }}" alt="{{ recipe.title }}" width="200">
+            <p><strong>Category:</strong> {{ recipe.category }}</p>
+            <p><strong>Ingredients:</strong> {{ recipe.ingredients|linebreaks }}</p>
+            <p><strong>Description:</strong> {{ recipe.description|linebreaks }}</p>
+            <p><strong>Created At:</strong> {{ recipe.created_at }}</p>
+            <p><strong>Updated At:</strong> {{ recipe.updated_at }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+   </div>
+{% endblock %}

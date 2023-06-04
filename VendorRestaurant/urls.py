@@ -11,6 +11,7 @@ urlpatterns = [
     path('', include('employee.urls')),
     path('', include('task.urls')),
     path('', include('restaurantmenu.urls')),
+    path('', include('recipes.urls')),
 
 
 

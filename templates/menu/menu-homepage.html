@@ -1,126 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-  <div class="row">
-    <div class="col-md-2">
-      <span class="navbar-vertical">
-        <a class="nav-link active" href="#">Food Menu</a>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Bakery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mexican Restaurant</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shop and go</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pizza</a>
-          </li>
-        </ul>
-      </span>
-      <br>
-      <span class="navbar-vertical">
-        <a class="nav-link active" href="#">Restaurants in town</a>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Pages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">FAQ's</a>
-          </li>
-        </ul>
-      </span>
-      <br>
-      <a class="nav-link active" href="#">Blog</a>
-      <br>
-      <a class="nav-link active" href="#">Recipes</a>
-    </div>
-
-    <div class="col-md-4">
-      <table>
-        <thead>
-          <tr>
-            <th>Coloana 1</th>
-            <th>Coloana 2</th>
-            <th>Coloana 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Ana</td>
-            <td>are</td>
-            <td>mere si pere</td>
-          </tr>
-          <tr>
-            <td>Cr</td>
-            <td>tt</td>
-            <td>cmtz</td>
-          </tr>
-          <tr>
-            <td>Eu</td>
-            <td>invat</td>
-            <td>programare</td>
-          </tr>
-        </tbody>
-      </table>
-
-  </div>
-</div>
-
-{# <div class="card-container">#}
-{#{% for product in menu %}#}
-{#  <div class="card">#}
-{#    <img src="{{ product.image }}" alt="{{ product.name }}">#}
-{#    <h3>{{ product.name }}</h3>#}
-{#    <p>{{ product.description }}</p>#}
-{#    <span class="price">{{ product.price }}</span>#}
-{#    <a href="#" class="btn">Adaugă în coș</a>#}
-{#  </div>#}
-{#{% endfor %}#}
-{#</div> #}
-
-<footer id="footer" class="footer-style-2">
-  <div class="footer-widget">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="widget widget-newsletter">
-            <div class="widget-title">
-              <h5>Subscribe to our Newsletter</h5>
-            </div>
-            <div class="fieldset">
-              <form action="#">
-                <div class="field-holder">
-                  <label>
-                    <i class="icon-envelope3"></i>
-                    <input type="text" class="field-input" placeholder="Enter Your Email Address...">
-                  </label>
-                </div>
-                <div class="field-holder btn-holder">
-                  <input class="subscribe-btn bgcolor" type="submit" value="Sign Up">
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="copy-right">
-          <p>© 2023 Knife and Fork. All Rights Reserved. Developed By <a href="https://www.linkedin.com/in/sidonia05/">Sidonia Bozdog</a></p>
+        <div class="col-md-2">
+            {% include 'menu/verfical-navbar.html' %}
         </div>
-      </div>
+        <div class="col-md-9">
+            <div class="card-container-fluid">
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-md-4">
+                            <div class="card card-height">
+                                <div class="image-container">
+                                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                                </div>
+                                <div>
+                                    {{ product.name }}
+                                </div>
+                                <details open>
+                                    <summary>Details </summary>
+                                    <p class="text-description-product">{{ product.description }}</p>
+                                </details>
+                                <span class="price">{{ product.price }} RON</span>
+
+                                <button type="button" class="btn btn-default btn-custom">
+                                    Add to cart
+                                </button>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</footer>
-<!-- Footer End -->
-</div>
 
-
+    {% include 'menu/menu-footer.html' %}
 {% endblock %}

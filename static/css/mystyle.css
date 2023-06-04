@@ -51,8 +51,9 @@ a.nav-link:hover {
 
 .login-register a {
     margin-left: 10px;
-    color:  #DAA520;
-    text-decoration: none;!important;
+    color: #DAA520;
+    text-decoration: none;
+!important;
 }
 
 
@@ -102,11 +103,10 @@ footer .container {
 }
 
 .employee-card {
-    background-color: #e2ece6;
+    background-color: #f9f9f9;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    opacity: 0.8;
 
 }
 
@@ -124,7 +124,7 @@ footer .container {
     border-radius: 5%;
 }
 
-+
+
 a.employee-name-link:hover {
     text-decoration: underline;
     color: blue;
@@ -168,7 +168,7 @@ tr:nth-child(even) {
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #f9f9f9;
-    opacity: 0.8;
+
 }
 
 .task-table th {
@@ -212,7 +212,7 @@ a.add-todo {
 /* Custom CSS for your HTML code */
 a.nav-link.active {
     font-size: 18px;
-     line-height: 21px;
+    line-height: 21px;
 
 
 }
@@ -227,14 +227,64 @@ a.nav-link.active {
     margin-bottom: 10px;
 }
 
-.footer-style-2 {
-    position: fixed;
+.footer-widget {
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-.navbar-vertical {
-    margin-top: 30px;
-    margin-left: 0px;
+
+/*imagine container produse rest*/
+.card {
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+.image-container {
+    flex: 0 0 30%; /* Se ocupă 30% din lățimea cardului */
+    margin-right: 10px;
+}
+
+.image-container img {
+    height: 150px;
+    width: auto;
+}
+
+
+
+/*btn*/
+.btn {
+    color: #DAA520;
+    width: fit-content;
+
+}
+
+.card-height {
+    height: 425px;
+}
+
+.text-description-product {
+    font-size: 12px;
+    left: 16%;
+
+}
+
+.card {
+    text-align: justify;
+}
+
+.price {
+    position: absolute;
+    top: 365px;
+    left: 16%;
+    transform: translateX(-50%);
+
+}
+
+.btn-custom {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }

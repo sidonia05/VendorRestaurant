@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'employee',
     'task',
     'fontawesome_5',
-    'menu',
+    'restaurantmenu',
 
 
 ]

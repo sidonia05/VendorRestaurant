@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'fontawesome_5',
     'restaurantmenu',
     'recipes',
+    'userextends',
 
 
 ]

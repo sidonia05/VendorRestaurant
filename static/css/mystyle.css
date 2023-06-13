@@ -45,7 +45,7 @@ a.nav-link:hover {
     justify-content: flex-end;
     align-items: center;
     padding-right: 15px;
-    margin-left: 460px;
+    margin-left: 440px;
 
 }
 
@@ -320,3 +320,30 @@ a.nav-link.active {
         padding: 20px;
 
     }
+
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search form {
+    display: inline-flex; /* schimbați display-ul în inline-flex */
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.search .form-control {
+    flex: none; /* schimbați flex-ul în none */
+    width: 200px; /* setați o lățime fixă */
+    margin-right: 5px;
+}
+
+.search .btn {
+    margin-left: 1px;
+}
+
+.my_search {
+     text-align: justify;
+}

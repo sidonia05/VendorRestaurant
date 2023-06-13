@@ -6,6 +6,8 @@ from django.views import View
 from django.views.generic import ListView
 
 from restaurantmenu.models import Product
+from django.shortcuts import render
+from django.db.models import Q
 
 
 # Create your views here.
@@ -90,3 +92,11 @@ class TraditionalFoodListView(ListView):
         products = Product.objects.filter(type_prod=6).all()
         context['products'] = products
         return context
+
+
+
+
+def search(request):
+    search_value = request.GET.get('value')
+    products = Product.objects.filter(name__icontains=search_value)
+    return render(request, 'menu/search_results.html', {'products': products, 'search_value': search_value})

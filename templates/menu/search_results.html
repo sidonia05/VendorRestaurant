@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <div class="my_search">
+    <div class="row">
+        <div class="col-md-6 offset-md-1 ">
+            {% for product in products %}
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+            {% empty %}
+                <p>No product</p>
+            {% endfor %}
+            <form action="{% url 'menu-homepage' %}" method="GET">
+                <button type="submit">View All Products</button>
+            </form>
+        </div>
+    </div>
+ </div>
+{% endblock %}

@@ -26,12 +26,19 @@
         </ul>
         <div class="login-register">
             <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal"
-               href="{% url 'create_user' %}">Register</a>
+               href="#">Register</a>
             <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal"
-               href="{% url 'user_login' %}">Login</a>
+               href="#">Login</a>
         </div>
     </div>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    </form>
+    <div class="search">
+        <form method="get" action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="value" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <i class='bx bx-search'></i>
+            </button>
+        </form>
+    </div>
+
+
 </nav>

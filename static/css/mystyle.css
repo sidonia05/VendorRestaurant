@@ -46,14 +46,19 @@ a.nav-link:hover {
     align-items: center;
     padding-right: 15px;
     margin-left: 440px;
+    color: #DAA520;
 
+}
+
+.navbar-text {
+    color: #DAA520;!important;
+    padding-right: 25px;
 }
 
 .login-register a {
     margin-left: 10px;
     color: #DAA520;
     text-decoration: none;
-!important;
 }
 
 
@@ -347,3 +352,4 @@ a.nav-link.active {
 .my_search {
      text-align: justify;
 }
+

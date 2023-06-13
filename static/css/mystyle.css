@@ -298,8 +298,6 @@ a.nav-link.active {
     border-radius: 5px;
     /*overflow: hidden;*/
     position: relative;
-
-
 }
 
 .image-container img {
@@ -311,13 +309,6 @@ a.nav-link.active {
     margin-bottom: 5px;
 }
 
-/*.image-container:hover:before {*/
-/*    opacity: 1;*/
-/*}*/
-
-/*.image-container:hover img {*/
-/*    transform: scale(1.1);*/
-/*}*/
 
 .recipe-container {
     max-width: 800px;
@@ -328,7 +319,7 @@ a.nav-link.active {
 .cart {
     position: fixed;
     top: 12px;
-    right: 740px;
+    /*right: 740px;*/
     /*background-color: #f1f1f1;*/
     padding: 10px;
     text-decoration: none;
@@ -339,7 +330,7 @@ a.nav-link.active {
 #count {
     position: fixed;
     top: 12px; /* Modificați această valoare în funcție de poziția dorită în partea de sus */
-    right: 740px; /* Modificați această valoare în funcție de poziția dorită în partea de dreapta */
+    right: 740px;
     font-size: 14px;
     color: #DAA520;
     z-index: 999; /* Adăugați această linie pentru a asigura vizibilitatea numărului */
@@ -348,3 +339,4 @@ a.nav-link.active {
 .btn-secondary {
     --bs-btn-bg: transparent;
 }
+

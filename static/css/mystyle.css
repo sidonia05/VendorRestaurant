@@ -317,9 +317,9 @@ a.nav-link.active {
 }
 
 .cart {
-    position: fixed;
+
     top: 12px;
-    /*right: 740px;*/
+    right: 740px;
     /*background-color: #f1f1f1;*/
     padding: 10px;
     text-decoration: none;
@@ -328,7 +328,6 @@ a.nav-link.active {
 }
 
 #count {
-    position: fixed;
     top: 12px; /* Modificați această valoare în funcție de poziția dorită în partea de sus */
     right: 740px;
     font-size: 14px;
@@ -338,5 +337,36 @@ a.nav-link.active {
 
 .btn-secondary {
     --bs-btn-bg: transparent;
+}
+
+.input-spinner {
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f2f2f2;
+}
+
+/*Cart*/
+
+.input-spinner button {
+    background-color: #fff;
+}
+
+.input-spinner input {
+    display: flex;
+    border: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.text-muted {
+    text-align: center;
+    width: 130px;
+}
+
+.middle-price, .price-wrap {
+    text-align: center;
+    padding-top: 20px;
 }
 

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'fontawesome_5',
     'restaurantmenu',
     'recipes',
-    'userextend'
+    'userextend',
+    'cart',
 
 
 ]
@@ -129,3 +130,13 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
+
+
+#email config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'mail.horiascurtu.eu'
+EMAIL_HOST_USER = 'ro38group@horiascurtu.eu'
+EMAIL_HOST_PASSWORD = 'Django1234!'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

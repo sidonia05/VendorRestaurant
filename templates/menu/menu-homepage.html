@@ -18,14 +18,18 @@
                                     {{ product.name }}
                                 </div>
                                 <details open>
-                                    <summary>Details </summary>
+                                    <summary>Details</summary>
                                     <p class="text-description-product">{{ product.description }}</p>
                                 </details>
                                 <span class="price">{{ product.price }} RON</span>
 
-                                <button type="button" class="btn btn-default btn-custom">
-                                    Add to cart
-                                </button>
+                                <a href="{% url 'add_cart' product.id %}">
+                                    <button type="button" class="btn btn-default btn-custom">
+                                        Add to cart
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </a>
+
 
                             </div>
                         </div>
@@ -34,8 +38,8 @@
             </div>
         </div>
     </div>
-<br>
-<br>
+    <br>
+    <br>
 
     {% include 'menu/menu-footer.html' %}
 {% endblock %}

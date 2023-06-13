@@ -17,6 +17,7 @@ urlpatterns = [
     path('', include('task.urls')),
     path('', include('restaurantmenu.urls')),
     path('', include('recipes.urls')),
+    path('', include('cart.urls')),
     path("login/", views.LoginView.as_view(form_class=AuthenticationNewForm), name="login"),
     path("password_change/", views.PasswordChangeView.as_view(form_class=PasswordChangeNewForm), name="password_change"),
 
@@ -24,6 +25,6 @@ urlpatterns = [
 
 
     path('', include('userextend.urls')),
-    path('admin/', admin.site.urls),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

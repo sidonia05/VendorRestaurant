@@ -320,36 +320,31 @@ a.nav-link.active {
 /*}*/
 
 .recipe-container {
-        max-width: 800px;
-        margin: 0;
-        padding: 20px;
-
-    }
-
-
-.search {
-    display: flex;
-    align-items: center;
+    max-width: 800px;
+    margin: 0;
+    padding: 20px;
 }
 
-.search form {
-    display: inline-flex; /* schimbați display-ul în inline-flex */
-    align-items: center;
-    flex-wrap: nowrap;
-
+.cart {
+    position: fixed;
+    top: 12px;
+    right: 740px;
+    /*background-color: #f1f1f1;*/
+    padding: 10px;
+    text-decoration: none;
+    color: #DAA520;
+    z-index: 999; /* Adăugați această linie pentru a asigura vizibilitatea butonului */
 }
 
-.search .form-control {
-    flex: none; /* schimbați flex-ul în none */
-    width: 200px; /* setați o lățime fixă */
-    margin-right: 5px;
+#count {
+    position: fixed;
+    top: 12px; /* Modificați această valoare în funcție de poziția dorită în partea de sus */
+    right: 740px; /* Modificați această valoare în funcție de poziția dorită în partea de dreapta */
+    font-size: 14px;
+    color: #DAA520;
+    z-index: 999; /* Adăugați această linie pentru a asigura vizibilitatea numărului */
 }
 
-.search .btn {
-    margin-left: 1px;
+.btn-secondary {
+    --bs-btn-bg: transparent;
 }
-
-.my_search {
-     text-align: justify;
-}
-

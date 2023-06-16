@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <h2 style="text-align: center">Payment</h2>
+
+    <h4 class="cart-item">Payment</h4>
 
     <section class="section-content padding-y bg">
         <div class="container">
@@ -98,10 +99,10 @@
                         <div class="card-body">
                             <table class="table table-borderless table-shopping-cart">
                                 <thead class="card-title">
-                                <tr class="space">
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Price</th>
+                                <tr class="text-muted">
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
                                 </tr>
                                 </thead>
                                 {% for cart_item in cart_items %}
@@ -128,16 +129,16 @@
 
                             </table>
 
-                            <button type="submit" name="submit" class="btn btn-light btn-block" >Place Order</button>
+                            <a href="{% url 'place_order' %}" class="btn btn-light btn-block">Place Order</a>
 
-                                <a href="{% url 'menu-homepage' %}" class="btn btn-light btn-block">Continue
-                                    Shopping</a>
-                            </div>
-                            </form>
-                        </div> <!-- card-body.// -->
-                    </div> <!-- card.// -->
-                </aside> <!-- col.// -->
-            </div> <!-- row.// -->
+                            <div><a href="{% url 'menu-homepage' %}" class="btn btn-light btn-block">Continue
+                                Shopping</a></div>
+                        </div>
+                        </form>
+                    </div> <!-- card-body.// -->
+            </div> <!-- card.// -->
+            </aside> <!-- col.// -->
+        </div> <!-- row.// -->
         </div> <!-- container .//  -->
     </section>
     <script src="{% static 'js/my_script.js' %}"></script>

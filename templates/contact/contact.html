@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-5 offset-md-1">
+            <h5 class="contact-heading">Contact</h5>
+
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="name" class="label-spacing">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email" class="label-spacing">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="label-spacing">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="2" required
+                              placeholder="Write your text here"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary but-spacing">Send</button>
+
+            </form>
+
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-3 offset-md-1">
+            <div class="opt-conts">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23838.820455791443!2d23.643009356757705!3d46.77402399662197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490b64f9a57925%3A0x248bd8241afed92e!2sAeroportul%20Interna%C8%9Bional%20Avram%20Iancu%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1686931075326!5m2!1sro!2sro"
+                        width="350" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 offset-md-1">
+        <div class="contact-info">
+            <p>Phone: +1 123 456 7890</p>
+            <p>Email: forkandknife@gmail.ro</p>
+            <p>Address: Traian Vuia, no 149-151, Cluj-Napoca, Romania</p>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+{% endblock %}

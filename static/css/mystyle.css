@@ -368,12 +368,17 @@ a.nav-link.active {
     width: 130px;
 }
 
-.middle-price, .price-wrap {
+.price-wrap {
     align-items: flex-start;
     text-align: left;
-    padding-left: 30px;
+    padding-left: 80px;
     padding-top: 10px;
 }
+
+th.middle-price {
+    text-align: center;
+}
+
 
 .info p {
     display: flex;
@@ -387,6 +392,31 @@ a.nav-link.active {
 }
 
 th.space {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
+.cart-item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 125px;
+}
+
+/*contact*/
+.contact-info p {
+    line-height: 10px;
+    margin-top: 10px;
+}
+
+.contact-heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.label-spacing {
+    padding-bottom: 7px;
+    padding-top: 5px;
+}
+
+.but-spacing {
+    margin-top: 18px;
+}

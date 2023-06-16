@@ -3,8 +3,8 @@
 
 {% block content %}
 
-    <h2 style="text-align: center">Cart items</h2>
-    <br>
+    <h4 class="cart-item">Cart items</h4>
+
 
     <section class="section-content padding-y bg">
         <div class="container">
@@ -33,16 +33,16 @@
                                     <tr>
                                         <td>
                                             <figure class="itemside align-items-center">
-                                                    <div class="aside">
-                                                        <img src="{{ cart_item.product.image.url }}" class="img-sm"
-                                                             style="max-width: 150px;">
-                                                    </div>
-                                                <figcaption class="info">
-                                                    <p class="title text-dark">{{ cart_item.product.name }}</p>
-                                                    <p class="text-muted small center-text">{{ cart_item.product.quantity }}
-                                                        Grams</p>
-                                                </figcaption>
-                                            </figure>
+                                                <div class="aside">
+                                                    <img src="{{ cart_item.product.image.url }}" class="img-sm"
+                                                         style="max-width: 150px;">
+                                                </div>
+                                             <figcaption class="info">
+    <p class="text-muted small center-text" style="display: inline;">{{ cart_item.product.name }}, </p>
+    <p class="text-muted small center-text" style="display: inline;">{{ cart_item.product.quantity }} Grams</p>
+</figcaption>
+</figure>
+
 
 
                                         </td>

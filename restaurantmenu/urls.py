@@ -13,5 +13,6 @@ urlpatterns = [
     path('menu/salad', SaladListView.as_view(), name='menu-salad'),
     path('menu/traditional', TraditionalFoodListView.as_view(), name='menu-traditional'),
     path('search/', views.search, name='search'),
+
 ]
 

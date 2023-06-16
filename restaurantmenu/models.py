@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from django.urls import reverse
 
 PRODUCT_TYPES = (
     ("1", 'Bakery'),
@@ -23,3 +24,4 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+

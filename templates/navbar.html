@@ -37,18 +37,12 @@
                         <li><a class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
                         <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                     </ul>
-
-                             <a href="{% url 'cart' %}" class="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <p id="count">0</p>
-                    </ul>
-
-
                 </div>
-
-
             </div>
+
+                 <a href="{% url 'cart' %}" class="cart">
+                           <i class="fas fa-shopping-cart"></i> </a>
+                         <p id="count">{{ cart_count }}</p>
         {% else %}
             <div class="login-register">
                 <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal"

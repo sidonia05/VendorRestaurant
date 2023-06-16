@@ -51,7 +51,8 @@ a.nav-link:hover {
 }
 
 .navbar-text {
-    color: #DAA520;!important;
+    color: #DAA520;
+!important;
     padding-right: 25px;
 }
 
@@ -317,22 +318,24 @@ a.nav-link.active {
 }
 
 .cart {
-
-    top: 12px;
-    right: 740px;
-    /*background-color: #f1f1f1;*/
-    padding: 10px;
-    text-decoration: none;
+    position: relative;
     color: #DAA520;
-    z-index: 999; /* Adăugați această linie pentru a asigura vizibilitatea butonului */
+    z-index: 999;
+    margin-left: 20px;
+
+}
+
+.cart i {
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 #count {
     top: 12px; /* Modificați această valoare în funcție de poziția dorită în partea de sus */
-    right: 740px;
+    padding-right: 5px;
     font-size: 14px;
     color: #DAA520;
-    z-index: 999; /* Adăugați această linie pentru a asigura vizibilitatea numărului */
+    z-index: 999
 }
 
 .btn-secondary {
@@ -366,7 +369,24 @@ a.nav-link.active {
 }
 
 .middle-price, .price-wrap {
-    text-align: center;
-    padding-top: 20px;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.info p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.image-container1 {
+    max-width: 150px;
+}
+
+th.space {
+  margin-bottom: 10px;
 }
 

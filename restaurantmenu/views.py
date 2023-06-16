@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.shortcuts import render
@@ -92,7 +92,6 @@ class TraditionalFoodListView(ListView):
         products = Product.objects.filter(type_prod=6).all()
         context['products'] = products
         return context
-
 
 
 

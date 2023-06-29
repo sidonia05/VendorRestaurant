@@ -1,6 +1,9 @@
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import CreateView
+
+from cart.models import CartItem, Cart
 from userextend.forms import UserForm, AuthenticationNewForm
 
 
@@ -22,3 +25,11 @@ def login_view(request):
     else:
         form = AuthenticationNewForm()
     return render(request, 'registration/login.html', {'form': form})
+
+
+
+@login_required
+def profile(request):
+    user = request.user
+    cart_items = CartItem.objects.filter(user=user)
+    return render(request, 'registration/profile.html', {'user': user, 'cart_items': cart_items})

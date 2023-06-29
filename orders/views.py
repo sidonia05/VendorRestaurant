@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Variabila globală pentru numărul comenzii
+# Global variable for the order number
 order_counter = 1
 
 def place_order(request):
@@ -10,14 +10,14 @@ def place_order(request):
     if request.method == 'POST':
         payment_type = request.POST.get('payment_type')
 
-        # Incrementează numărul comenzii
+        # Increment the order number
         order_number = order_counter
         order_counter += 1
 
-        # Procesează datele și efectuează acțiunile corespunzătoare
+        # Process the data and perform the corresponding actions
 
-        # Afișează mesajul de confirmare
-        message = f"Comanda a fost plasată cu succes. Tipul de plată: {payment_type}, Numărul comenzii: {order_number}"
+        # Display the confirmation message
+        message = f"The order has been successfully placed. Payment type: {payment_type}, Order number: {order_number}"
         return HttpResponse(message)
 
     return render(request, 'order/place-order.html')

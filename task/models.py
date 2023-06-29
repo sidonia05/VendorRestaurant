@@ -9,7 +9,9 @@ class Task(models.Model):
     create = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.user_id} {self.title}'
+        return f'{self.user}, {self.title}'
 
     class Meta:
         ordering = ['complete']
+
+

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="db" uuid="0c2310a3-2fa6-429a-844d-017fa1848568">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>ee52fa64-55f4-494f-bc5d-dae3fa62ffd4</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:D:\projects\VendorRestaurant\db.sqlite3</jdbc-url>
@@ -20,6 +20,13 @@
       <remarks>$PROJECT_DIR$/VendorRestaurant/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:D:\projects\VendorRestaurant\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="db driver - db.sqlite3" uuid="5bec3a98-4a6c-43b5-b8eb-be79bada3e52">
+      <driver-ref>ee52fa64-55f4-494f-bc5d-dae3fa62ffd4</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

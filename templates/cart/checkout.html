@@ -7,15 +7,15 @@
 
     <section class="section-content padding-y bg">
         <div class="container">
+            <form action="" method="post">
+                <!-- ============================ COMPONENT 1 ================================= -->
+                <div class="row">
+                    <aside class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4 ">Billing Address</h5>
 
-            <!-- ============================ COMPONENT 1 ================================= -->
-            <div class="row">
-                <aside class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title mb-4 ">Billing Address</h5>
 
-                                <form action="" method="post">
                                 {% csrf_token %}
                                 <div class="row">
                                     <div class="col form-group">
@@ -86,63 +86,59 @@
                                         <textarea name="order_note" class="form-control"></textarea>
                                     </div>
                                 </div>
+                                {#                </aside>#}
 
-
-                        </div>
-                    </div> <!-- card.// -->
-
-                </aside>
-
-
-                <aside class="col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <table class="table table-borderless table-shopping-cart">
-                                <thead class="card-title">
-                                <tr class="text-muted">
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                </tr>
-                                </thead>
-                                {% for cart_item in cart_items %}
-                                    <tr>
-                                        <td>
-                                            <figure class="itemside align-items-left">
-                                                <div class="image-container1 align-items-left">
-                                                    <img src="{{ cart_item.product.image.url }}" class="img-thumbnail">
-                                                    <div>{{ cart_item.product.name }}</div>
-                                                </div>
-                                            </figure>
-                                        </td>
-
-                                        <td>
-                                            <div class="quantity">{{ cart_item.quantity }}</div>
-                                        </td>
-                                        <td>
-                                            <div class="quantity">{{ cart_item.sub_total }} RON</div>
-                                        </td>
-                                    </tr>
-
-
-                                {% endfor %}
-
-                            </table>
-                            <div>
-                                <a href="{% url 'place_order' %}">
-                                    <button type="submit" name="Submit" class="btn btn-light btn-block">Place Order
-                                    </button>
-                                </a>
                             </div>
-
-                            <div><a href="{% url 'menu-homepage' %}" class="btn btn-light btn-block">Continue
-                                Shopping</a></div>
                         </div>
-                        </form>
-                    </div> <!-- card-body.// -->
-            </div> <!-- card.// -->
-            </aside> <!-- col.// -->
-        </div> <!-- row.// -->
+                    </aside>
+                    <aside class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-borderless table-shopping-cart">
+                                    <thead class="card-title">
+                                    <tr class="text-muted">
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    {% for cart_item in cart_items %}
+                                        <tr>
+                                            <td>
+                                                <figure class="itemside align-items-left">
+                                                    <div class="image-container1 align-items-left">
+                                                        <img src="{{ cart_item.product.image.url }}"
+                                                             class="img-thumbnail">
+                                                        <div>{{ cart_item.product.name }}</div>
+                                                    </div>
+                                                </figure>
+                                            </td>
+
+                                            <td>
+                                                <div class="quantity">{{ cart_item.quantity }}</div>
+                                            </td>
+                                            <td>
+                                                <div class="quantity">{{ cart_item.sub_total }} RON</div>
+                                            </td>
+                                        </tr>
+
+
+                                    {% endfor %}
+
+                                </table>
+                                <div>
+                                    <a href="{% url 'place_order' %}" class="btn btn-light btn-block">
+                                        Place Order
+                                    </a>
+                                </div>
+
+                                <div><a href="{% url 'menu-homepage' %}" class="btn btn-light btn-block">Continue
+                                    Shopping</a></div>
+                            </div>
+                        </div> <!-- card-body.// -->
+                    </aside>
+                </div> <!-- row.// -->
+            </form>
         </div> <!-- container .//  -->
     </section>
     <script src="{% static 'js/my_script.js' %}"></script>

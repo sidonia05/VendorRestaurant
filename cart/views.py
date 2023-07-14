@@ -70,6 +70,7 @@ def cart(request, total=0, quantity=0,tax=0, cart_items=None):
         for cart_item in cart_items:
             total += cart_item.product.price * cart_item.quantity
         tax = (Decimal('1.9') * total) / Decimal('100')
+        tax = tax.quantize(Decimal('0.00'))  # Format the tax value with two decimal places
         grand_total = total + tax
     except ObjectDoesNotExist:
         pass

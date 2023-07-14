@@ -12,7 +12,7 @@ def place_order(request):
         payment_type = request.POST.get('payment_type')
 
         # Increment the order number
-        order = Order.objects.filter(user=request.user).last()
+        order = Order.objects.filter().last()
         if order is not None:
             order.number += order_counter
         else:
